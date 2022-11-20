@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+/* geral */
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 90%;
+    margin: auto;
+    font-size: 16px;
+    max-width: 382.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+main,
+.cabecalho {
+    padding: 1rem 1rem 0 1rem;
+}
+
+/* Cabecalho */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-notifications {
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.cabecalho-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notifications-unread-counter {
+    color: #fff;
+    background-color: hsl(219, 85%, 26%);
+    font-weight: 800;
+    width: 35px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.read-all-notifications {
+    color: hsl(219, 12%, 42%);
+}
+
+/* Notificações */
+.notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.unread {
+    background-color: hsl(210, 60%, 98%);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.notification {
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification-container {
+    display: flex;
+    gap: 10px;
+}
+
+.have-photo .profile-notification-avatar {
+    width: 45.56px;
+}
+
+.notification-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-notification-avatar {
+    width: 13%;
+    align-self: baseline;
+}
+
+.notification-action {
+    font-size: 14px;
+    color: hsl(219, 12%, 42%);
+    line-height: 18px;
+}
+
+.unread .notification-action::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: hsl(1, 90%, 64%);
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.post-commented-notification,
+.notification-profile {
+    font-weight: 800;
+}
+
+.post-commented-notification {
+    padding-left: 5px;
+}
+
+.notification-profile {
+    padding-right: 5px;
+}
+
+.notification-profile {
+    color: hsl(224, 21%, 14%);
+    font-size: 15px;
+}
+
+.text-notification {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.notification-time {
+    color: hsl(219, 14%, 63%);
+    font-size: 15px;
+}
+
+.message-notification {
+    align-self: flex-end;
+    border: 1px solid hsl(219, 14%, 63%);
+    border-radius: 5px;
+    width: 73%;
+    padding: 1rem;
+}
+
+.message-notification p {
+    color: hsl(219, 14%, 63%);
+    line-height: 20px;
+}
+
+.commented-picture {
+    width: 15%;
+    align-self: baseline;
+    border: 2px solid transparent;
+}
+
+/* Hovers */
+
+.notification-profile,
+.post-commented-notification,
+.read-all-notifications,
+.message-notification,
+.commented-picture {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.notification-profile:hover,
+.post-commented-notification:hover,
+.read-all-notifications:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.message-notification:hover {
+    background-color: hsl(211, 68%, 94%);
+    border-color: hsl(211, 68%, 94%);
+}
+
+.commented-picture:hover {
+    border-color: hsl(211, 68%, 94%);
+    background-color: hsl(211, 68%, 94%);
+    border-radius: 8px;
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    html {
+        background-color: hsl(205, 33%, 90%);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+
+    body {
+        max-width: 921.59px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+
+
+    .profile-notification-avatar {
+        width: 5%;
+    }
+
+    .commented-picture {
+        width: 5%;
+        margin-left: 8rem;
+    }
+
+    .message-notification {
+        width: 90%;
+    }
+
+    .notification-container {
+        display: flex;
+        gap: 10p x;
+    }
+
+    .have-photo {
+        justify-content: space-between;
+    }
+
+    .have-photo .profile-notification-avatar {
+        width: 44.47px;
+    }
+}
